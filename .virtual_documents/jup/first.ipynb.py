@@ -51,11 +51,28 @@ tensor = torch.rand(3,4)
 
 
 print(tensor.dtype)
-print(tensor.shape)
-print(tensor.device)
 
 
-tensor
+
+if torch.cuda.is_available():
+    tensor = torch.to('cuda')
+
+
+
+tensor = torch.ones(4,4)
+tensor[:,1] = 0
+print(tensor)
+
+
+t1 = torch.cat([tensor, tensor, tensor], dim=1)
+print(t1)
+
+
+
+print(f"tensor.mul(tensor) : \n {tensor.mul(tensor)} \n")
+    
+print(f"tensor*tensor : \n {tensor * tensor} \n")
+
 
 
 
