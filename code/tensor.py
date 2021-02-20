@@ -34,3 +34,6 @@ print(t1)
 
 print(f"tensor.mul(tensor) : \n {tensor.mul(tensor)} \n"}
 print(f"tensor*tensor : \n {tensor * tensor} \n")
+
+print(f"tensor.matmul(tensor.T) \n {tensor.matmul(tensor.t)} \n")
+print(f"tensor @ tensor.T \n {tensor @ tensor.T}"")
